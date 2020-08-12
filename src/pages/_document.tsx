@@ -48,12 +48,7 @@ class Doc extends Document {
           <meta charSet="utf-8" />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
         </Head>
-
         <body>
           <Main />
           <NextScript />
