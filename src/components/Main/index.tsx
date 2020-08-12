@@ -13,8 +13,8 @@ type Props = {
 function Main({
   title = 'SpaceX Rockets',
   description = 'Get space-x rockets using graphql public api.',
-  rockets = []
-}) {
+  rockets
+}: Props) {
   return (
     <S.Wrapper>
       <S.Title>{title}</S.Title>

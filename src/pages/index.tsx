@@ -7,7 +7,13 @@ import Main from 'components/Main'
 
 function Home() {
   const { data } = useQuery(GET_SPACEX_ROCKETS)
-  return <Main rockets={data && data.rockets}></Main>
+  return (
+    <Main
+      title="SpaceX Rockets"
+      description="Get space-x rockets using graphql public api."
+      rockets={data && data.rockets}
+    ></Main>
+  )
 }
 
 export default withApollo({ ssr: true })(Home)

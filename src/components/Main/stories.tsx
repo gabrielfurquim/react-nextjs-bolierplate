@@ -9,7 +9,11 @@ export default {
 
 export const Basic = () => (
   <Main
-    title={text('Title', 'React Avançado')}
-    description={text('Description', 'Typescript, ReactJS e Styled Components')}
+    title={text('Title', 'SpaceX Rockets')}
+    description={text(
+      'Description',
+      'Get space-x rockets using graphql public api.'
+    )}
+    rockets={[{ id: 'rocket' }]}
   />
 )

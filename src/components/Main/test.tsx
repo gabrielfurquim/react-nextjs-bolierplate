@@ -3,7 +3,7 @@ import Main from '.'
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<Main rockets={[{ id: 'rocket' }]} />)
 
     expect(
       screen.getByRole('heading', { name: /SpaceX Rockets/i })
@@ -13,7 +13,7 @@ describe('<Main />', () => {
   })
 
   it('should render the colors correctly', () => {
-    const { container } = render(<Main />)
+    const { container } = render(<Main rockets={[{ id: 'rocket' }]} />)
 
     expect(container.firstChild).toHaveStyle({
       'background-color': '#06092b'

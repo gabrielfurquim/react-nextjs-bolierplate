@@ -34,13 +34,21 @@ exports[`<Main /> should render the heading 1`] = `
   font-weight: 400;
 }
 
-.c4 {
+.c5 {
   margin-top: 3rem;
   width: min(30rem,100%);
 }
 
 .c3 {
   list-style: none;
+}
+
+.c4 {
+  margin: 1rem 0;
+  -webkit-letter-spacing: 1.4px;
+  -moz-letter-spacing: 1.4px;
+  -ms-letter-spacing: 1.4px;
+  letter-spacing: 1.4px;
 }
 
 <main
@@ -58,10 +66,16 @@ exports[`<Main /> should render the heading 1`] = `
   </h2>
   <ul
     class="c3"
-  />
+  >
+    <li
+      class="c4"
+    >
+      rocket
+    </li>
+  </ul>
   <img
     alt="Um foguete em fase de lançamento."
-    class="c4"
+    class="c5"
     src="/img/rocket.svg"
   />
 </main>
