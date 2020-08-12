@@ -26,15 +26,10 @@ exports[`<Main /> should render the heading 1`] = `
 }
 
 .c1 {
-  width: 25rem;
-  margin-bottom: 2rem;
-}
-
-.c2 {
   font-size: 2.5rem;
 }
 
-.c3 {
+.c2 {
   font-size: 2rem;
   font-weight: 400;
 }
@@ -44,28 +39,30 @@ exports[`<Main /> should render the heading 1`] = `
   width: min(30rem,100%);
 }
 
+.c3 {
+  list-style: none;
+}
+
 <main
   class="c0"
 >
-  <img
-    alt="Imagem de um átomo e React Avançado escrito ao lado."
-    class="c1"
-    src="/img/logo.svg"
-  />
   <h1
-    class="c2"
+    class="c1"
   >
-    React Avançado
+    SpaceX Rockets
   </h1>
   <h2
-    class="c3"
+    class="c2"
   >
-    Typescript, ReactJS e Styled Components
+    Get space-x rockets using graphql public api.
   </h2>
+  <ul
+    class="c3"
+  />
   <img
-    alt="Um desenvolvedor de frente para uma tela com código."
+    alt="Um foguete em fase de lançamento."
     class="c4"
-    src="/img/hero-illustration.svg"
+    src="/img/rocket.svg"
   />
 </main>
 `
