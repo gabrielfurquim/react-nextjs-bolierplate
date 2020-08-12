@@ -7,6 +7,14 @@ const GlobalStyles = createGlobalStyle`
     padding:0;
     box-sizing:border-box;
   }
+  body {
+    font-family:'Roboto';
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/public/fonts/Roboto/Roboto-Regular.ttf');
+  }
 
 
 `
