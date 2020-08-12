@@ -20,9 +20,10 @@ function Main({
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
       <S.List>
-        {rockets.map((rocket) => (
-          <S.ListItem key={rocket.id}>{rocket.id}</S.ListItem>
-        ))}
+        {rockets &&
+          rockets.map((rocket) => (
+            <S.ListItem key={rocket.id}>{rocket.id}</S.ListItem>
+          ))}
       </S.List>
       <S.Ilustration
         src="/img/rocket.svg"
