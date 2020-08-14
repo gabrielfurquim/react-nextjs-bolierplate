@@ -7,6 +7,7 @@ import Main from 'components/Main'
 
 function Home() {
   const { data } = useQuery(GET_SPACEX_ROCKETS)
+  console.log(process.env.API_HOST)
   return (
     <Main
       title="SpaceX Rockets"
