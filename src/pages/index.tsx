@@ -1,19 +1,13 @@
+import React from 'react'
 import withApollo from 'graphql/client'
-import { useQuery } from '@apollo/react-hooks'
+// import { useQuery } from '@apollo/react-hooks'
 
-import GET_SPACEX_ROCKETS from 'graphql/queries/getSpacexRockets'
-
-import Main from 'components/Main'
+// import GET_SPACEX_ROCKETS from 'graphql/queries/getSpacexRockets'
+import Layout from 'containers/Layout'
 
 function Home() {
-  const { data } = useQuery(GET_SPACEX_ROCKETS)
-  return (
-    <Main
-      title="SpaceX Rockets"
-      description="Get space-x rockets using graphql public api."
-      rockets={data && data.rockets}
-    ></Main>
-  )
+  // const { data } = useQuery(GET_SPACEX_ROCKETS)
+  return <Layout pageTitle="Home"></Layout>
 }
 
 export default withApollo({ ssr: true })(Home)
