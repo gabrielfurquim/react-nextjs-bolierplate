@@ -6,23 +6,19 @@ import Document, {
   DocumentContext
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { ServerStyleSheets } from '@material-ui/core/styles'
 
 import theme from 'styles/theme'
 
 class Doc extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const styledComponentsSheet = new ServerStyleSheet()
-    const materialUiSheet = new ServerStyleSheets()
     const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            styledComponentsSheet.collectStyles(
-              materialUiSheet.collect(<App {...props} />)
-            )
+            styledComponentsSheet.collectStyles(<App {...props} />)
         })
 
       const initialProps = await Document.getInitialProps(ctx)
@@ -31,7 +27,6 @@ class Doc extends Document {
         styles: (
           <>
             {initialProps.styles}
-            {materialUiSheet.getStyleElement()}
             {styledComponentsSheet.getStyleElement()}
           </>
         )

@@ -1,10 +1,5 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import {
-  ThemeProvider as MuiThemeProvider,
-  StylesProvider
-} from '@material-ui/styles'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from 'styles/global'
@@ -24,15 +19,10 @@ function App({ Component, pageProps }: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
         />
       </Head>
-      <StylesProvider injectFirst>
-        <MuiThemeProvider theme={theme}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <GlobalStyles />
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </MuiThemeProvider>
-      </StylesProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
